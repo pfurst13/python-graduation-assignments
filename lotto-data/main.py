@@ -5,7 +5,12 @@
 fiftytwo_numbers = []
 
 for i in range(5):
-    number_in_fiftytwo = input(f"Enter {i + 1} number: ")
-    fiftytwo_numbers.append(number_in_fiftytwo)
+    number_into_fiftytwo = int(input(f"Enter {i + 1} number: "))
+    fiftytwo_numbers.append(number_into_fiftytwo)
+    print(type(number_into_fiftytwo))
 
+print(fiftytwo_numbers)
+
+# 2, sorting numbers
+fiftytwo_numbers = sorted(fiftytwo_numbers)
 print(fiftytwo_numbers)
