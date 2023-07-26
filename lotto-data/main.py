@@ -1,0 +1,1 @@
+"""52nd week lotto numbers are as follows:  89 24 34 11 64"""
