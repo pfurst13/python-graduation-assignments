@@ -29,3 +29,5 @@ with open("lottosz.dat", "r") as lotto:
         all_lotto_numbers.append(act_numbers)
 print(all_lotto_numbers[user_number - 1])
 
+# 5, find the undrawn number (true/false)
+drown_number = 1 
