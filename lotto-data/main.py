@@ -30,21 +30,21 @@ with open("lottosz.dat", "r") as lotto:
 print(all_lotto_numbers[user_number - 1])
 
 # 5, find the undrawn number (true/false)
-drawn_number = 1
+
 is_drawn = True
 
-@todo nem jó
-for weeks in all_lotto_numbers:
-    for number in weeks:
-        if number == drawn_number and is_drawn == True:
-            continue
+for i in range(90):
+    num_counter = 0
+    # print('i: ', i, 'num_counter: ', num_counter)
+    for weeks in all_lotto_numbers:
+        if weeks.count(i + 1) > 0 :
+            print('hét: ', weeks, 'a szám: ', i + 1)
+            break
         else:
-            print("van")
-            is_drawn = False
-    drawn_number =+ 1
-    print(drawn_number)
-    if is_drawn == False:
+            num_counter += 1
+    if num_counter == 51 * 5:
+        print('van')
+        is_drawn = False
         break
-
-if drawn_number == 91:
-    print("nincs")
+if is_drawn:
+    print('nincs')
