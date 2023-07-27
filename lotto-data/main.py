@@ -49,7 +49,7 @@ for i in range(90):
 if is_drawn:
     print('nincs')
 
-# 6 finding unpair numbers
+# 6, finding unpair numbers
 
 odd_number_counter = 0
 
@@ -59,3 +59,13 @@ for weeks in all_lotto_numbers:
             odd_number_counter += 1
 
 print('odd number: ', odd_number_counter)
+
+# 7, append 52nd week and write out
+all_lotto_numbers.append(fiftytwo_numbers)
+
+with open("lotto52.txt", "w") as f:
+    for weeks in all_lotto_numbers:
+        for number in weeks:
+            f.write(f"{number} ")
+        
+        f.write('\n')
