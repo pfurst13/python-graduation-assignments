@@ -35,7 +35,6 @@ is_drawn = True
 
 for i in range(90):
     num_counter = 0
-    # print('i: ', i, 'num_counter: ', num_counter)
     for weeks in all_lotto_numbers:
         if weeks.count(i + 1) > 0 :
             print('hét: ', weeks, 'a szám: ', i + 1)
@@ -46,5 +45,17 @@ for i in range(90):
         print('van')
         is_drawn = False
         break
+    
 if is_drawn:
     print('nincs')
+
+# 6 finding unpair numbers
+
+odd_number_counter = 0
+
+for weeks in all_lotto_numbers:
+    for number in weeks:
+        if number % 2 != 0:
+            odd_number_counter += 1
+
+print('odd number: ', odd_number_counter)
