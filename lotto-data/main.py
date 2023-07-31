@@ -69,3 +69,17 @@ with open("lotto52.txt", "w") as f:
             f.write(f"{number} ")
         
         f.write('\n')
+
+# often number
+often_number = []
+
+for lotto_number in range(90):
+    counter = 0
+    for week in all_lotto_numbers:
+        if week.count(lotto_number + 1) > 0:
+            counter += week.count(lotto_number + 1)
+    
+    often_number.append(counter)
+
+print(often_number)
+    
