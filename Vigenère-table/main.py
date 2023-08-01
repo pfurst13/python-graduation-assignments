@@ -2,14 +2,16 @@ from unidecode import unidecode
 
 def format_string(user_input):
     user_input = unidecode(user_input)
+
     return user_input.upper()
 
 # 1, ask user to get 255 charachter input
 
 user_string = input("Enter a text max 255 characters no numbers: ")
-
+user_string = user_string.strip("")
 while len(user_string) > 255 or user_string.isalpha() == False:
     user_string = input("Too long or contains numbers. It can be 255 characters. Enter a new one: ")
+    user_string = user_string.strip("")
 
 # 2, 3 format string to english print out
 user_string = format_string(user_string)
@@ -26,3 +28,7 @@ while keyword_len != 5 or user_key_word.isalpha() == False:
     keyword_len = len(user_key_word)
 
 user_key_word = format_string(user_key_word)
+
+# 5, keyword concatenation
+
+
