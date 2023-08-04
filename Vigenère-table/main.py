@@ -41,3 +41,12 @@ for i in range(len(user_string)):
 
 concanate_user_key = concanate_user_key[:len(user_string)]
 print(user_string, len(user_string), concanate_user_key, len(concanate_user_key))
+
+# vtabla.dat open put in 2D list
+
+vtable_list = []
+
+with open("Vtabla.dat", "r") as vtable:
+    for line in vtable:
+        vtable_list.append(line)
+print(vtable_list)
