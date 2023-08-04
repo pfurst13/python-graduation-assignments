@@ -48,5 +48,21 @@ vtable_list = []
 
 with open("Vtabla.dat", "r") as vtable:
     for line in vtable:
+        act_line = []
+        line = line.rstrip('\n')
         vtable_list.append(line)
-print(vtable_list)
+
+coded_text = []
+
+for i in range(len(user_string)):
+    column = 0
+    raw = 0
+
+    for line, j in enumerate(vtable_list):
+        if line[i] == user_string[i]:
+            column = j
+    raw = vtable_list[j].index()
+
+    coded_text.append(vtable_list[column][raw])
+
+print(coded_text)
