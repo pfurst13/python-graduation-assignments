@@ -1,4 +1,5 @@
 from unidecode import unidecode
+import cryptography
 
 def format_string(user_input):
     user_input = unidecode(user_input)
@@ -52,30 +53,21 @@ with open("Vtabla.dat", "r") as vtable:
         line = line.rstrip('\n')
         vtable_list.append(line)
 
-coded_text = []
+coding = cryptography.Crypto(concanate_user_key, vtable_list)
 
-for i in range(len(user_string)):
-    column = 0
-    row = 0
+print(coding.coded_text(user_string))
 
-    for j, line in enumerate(vtable_list):
-        if line[0] == user_string[i]:
-            column = j
 
-    row = vtable_list[0].index(concanate_user_key[i])
-    coded_text.append(vtable_list[column][row])
-final_result = "".join(coded_text)
-print(final_result)
 
 # decoding
 
-decoded_text = []
-for i in range(len(concanate_user_key)):
-    column = vtable_list[0].index(concanate_user_key[i])
+# decoded_text = []
+# for i in range(len(concanate_user_key)):
+#     column = vtable_list[0].index(concanate_user_key[i])
 
-    for j, line in enumerate(vtable_list):
-        if line[column] == final_result[i]:
-            row = j
-            decoded_text.append(vtable_list[j][0])
+#     for j, line in enumerate(vtable_list):
+#         if line[column] == final_result[i]:
+#             row = j
+#             decoded_text.append(vtable_list[j][0])
 
-print("".join(decoded_text))
+# print("".join(decoded_text))
