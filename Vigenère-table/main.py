@@ -66,3 +66,16 @@ for i in range(len(user_string)):
     coded_text.append(vtable_list[column][row])
 final_result = "".join(coded_text)
 print(final_result)
+
+# decoding
+
+decoded_text = []
+for i in range(len(concanate_user_key)):
+    column = vtable_list[0].index(concanate_user_key[i])
+
+    for j, line in enumerate(vtable_list):
+        if line[column] == final_result[i]:
+            row = j
+            decoded_text.append(vtable_list[j][0])
+
+print("".join(decoded_text))
