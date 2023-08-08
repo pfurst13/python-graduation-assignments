@@ -56,13 +56,13 @@ coded_text = []
 
 for i in range(len(user_string)):
     column = 0
-    raw = 0
+    row = 0
 
-    for line, j in enumerate(vtable_list):
-        if line[i] == user_string[i]:
+    for j, line in enumerate(vtable_list):
+        if line[0] == user_string[i]:
             column = j
-    raw = vtable_list[j].index()
 
-    coded_text.append(vtable_list[column][raw])
-
-print(coded_text)
+    row = vtable_list[0].index(concanate_user_key[i])
+    coded_text.append(vtable_list[column][row])
+final_result = "".join(coded_text)
+print(final_result)
