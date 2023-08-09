@@ -1,5 +1,6 @@
 from unidecode import unidecode
 import cryptography
+import tables
 
 def format_string(user_input):
     user_input = unidecode(user_input)
@@ -34,13 +35,7 @@ while keyword_len > 5 or user_key_word.isalpha() == False:
 
 user_key_word = format_string(user_key_word)
 
-vtable_list = []
-
-with open("Vtabla.dat", "r") as vtable:
-    for line in vtable:
-        act_line = []
-        line = line.rstrip('\n')
-        vtable_list.append(line)
+vtable_list = tables.read_tabels("/Users/furst_peter/python-graduation-assignments/python-graduation-assignments/Vigenère-table/Vtabla.dat")
 
 coding = cryptography.Crypto(user_key_word, vtable_list)
 
