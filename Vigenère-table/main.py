@@ -1,9 +1,11 @@
 from unidecode import unidecode
+import string
 import cryptography
 import tables
 
 def format_string(user_input):
     user_input = unidecode(user_input)
+    user_input = user_input.translate(str.maketrans('','', string.punctuation))
 
     return user_input.upper()
 
