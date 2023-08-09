@@ -34,17 +34,6 @@ while keyword_len > 5 or user_key_word.isalpha() == False:
 
 user_key_word = format_string(user_key_word)
 
-# 5, keyword concatenation
-# concanate_user_key = ""
-# for i in range(len(user_string)):
-#     concanate_user_key += user_key_word
-
-
-# concanate_user_key = concanate_user_key[:len(user_string)]
-# print(user_string, len(user_string), concanate_user_key, len(concanate_user_key))
-
-# vtabla.dat open put in 2D list
-
 vtable_list = []
 
 with open("Vtabla.dat", "r") as vtable:
