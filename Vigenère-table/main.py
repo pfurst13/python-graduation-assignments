@@ -35,13 +35,13 @@ while keyword_len > 5 or user_key_word.isalpha() == False:
 user_key_word = format_string(user_key_word)
 
 # 5, keyword concatenation
-concanate_user_key = ""
-for i in range(len(user_string)):
-    concanate_user_key += user_key_word
+# concanate_user_key = ""
+# for i in range(len(user_string)):
+#     concanate_user_key += user_key_word
 
 
-concanate_user_key = concanate_user_key[:len(user_string)]
-print(user_string, len(user_string), concanate_user_key, len(concanate_user_key))
+# concanate_user_key = concanate_user_key[:len(user_string)]
+# print(user_string, len(user_string), concanate_user_key, len(concanate_user_key))
 
 # vtabla.dat open put in 2D list
 
@@ -53,21 +53,9 @@ with open("Vtabla.dat", "r") as vtable:
         line = line.rstrip('\n')
         vtable_list.append(line)
 
-coding = cryptography.Crypto(concanate_user_key, vtable_list)
+coding = cryptography.Crypto(user_key_word, vtable_list)
 
-print(coding.coded_text(user_string))
+result_text = coding.coded_text(user_string)
 
-
-
-# decoding
-
-# decoded_text = []
-# for i in range(len(concanate_user_key)):
-#     column = vtable_list[0].index(concanate_user_key[i])
-
-#     for j, line in enumerate(vtable_list):
-#         if line[column] == final_result[i]:
-#             row = j
-#             decoded_text.append(vtable_list[j][0])
-
-# print("".join(decoded_text))
+print(result_text)
+print(coding.decode_text(result_text))
