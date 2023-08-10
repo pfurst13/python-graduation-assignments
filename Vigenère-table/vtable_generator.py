@@ -9,11 +9,13 @@ with open("ascii.txt", "r") as ascii_table:
         act_line = line.split(" ")
         ascii_list.append(act_line[1])
 
-# print(ascii_list)
-
+#print(ascii_list)
+first_line = "".join(ascii_list)
+print("0-1 line", first_line)
 idx = 0
 
 while idx <= len(ascii_list):
+     
      act_line = []
      counter = 0
      
@@ -22,9 +24,12 @@ while idx <= len(ascii_list):
              act_line.append(ascii_list[counter - 1])
         
         counter += 1
-     idx += 1
+     
      final = "".join(act_line)
-     print(final)
+     if idx > 0:
+         final = final + first_line[:idx]
+     idx += 1
+     print(idx - 1, final)
          
 
 # vtable_list = []
