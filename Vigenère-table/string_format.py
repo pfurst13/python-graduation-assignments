@@ -3,9 +3,8 @@ import string
 
 def format_from_keyboard(user_input):
     user_input = unidecode(user_input)
-    user_input = user_input.translate(str.maketrans('','', string.punctuation))
 
-    return user_input.upper()
+    return user_input
 
 def format_from_file(txt_input):
 

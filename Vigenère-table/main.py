@@ -3,13 +3,8 @@ import string
 import cryptography
 import tables
 
-def format_string(user_input):
-    user_input = unidecode(user_input)
-    user_input = user_input.translate(str.maketrans('','', string.punctuation))
 
-    return user_input.upper()
-
-# 1, ask user to get 255 charachter input
+# 1 user input
 
 user_string = input("Enter a text max 255 characters no numbers: ")
 user_string = format_string(user_string)
