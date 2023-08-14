@@ -15,8 +15,6 @@ user_key_word = string_format.format_from_keyboard(user_key_word)
 
 is_default = True
 
-
-
 if is_default == False: 
     vtable_source = input("Add the vtable locaton route: ")
     vtable_list = tables.read_tabels(vtable_source)
