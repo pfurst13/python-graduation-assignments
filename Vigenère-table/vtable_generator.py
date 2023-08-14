@@ -1,13 +1,14 @@
 # acii tábla tartalmazza a karakterek számozását. A chr() metodussal átkonvertálom a számot
 # a megfelelő karakterre. Utána a slice() metodussal hozom létre a kódolandó eggyel eltólt táblát. 
 
-ascii_list = ['\t']
+ascii_list = ['á', 'Á', 'é', 'É', 'í','Í', 'ó', 'Ó', 'ö', 'Ö', 'ő', 'Ő',
+              'ú', 'Ú', 'ű', 'Ű', 'ü', 'Ü']
 
 for i in range(32, 127):
      
     ascii_list.append(chr(i))
 
-with open("table.txt", "w") as line: 
+with open("table_hu.txt", "w") as line: 
 
     for i in range(len(ascii_list)):
      

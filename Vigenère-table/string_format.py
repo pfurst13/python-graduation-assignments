@@ -2,7 +2,7 @@ from unidecode import unidecode
 import string
 
 def format_from_keyboard(user_input):
-    user_input = unidecode(user_input)
+    #user_input = unidecode(user_input)
 
     return user_input
 
