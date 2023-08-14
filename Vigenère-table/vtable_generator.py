@@ -1,14 +1,11 @@
 # acii tábla tartalmazza a karakterek számozását. A chr() metodussal átkonvertálom a számot
 # a megfelelő karakterre. Utána a slice() metodussal hozom létre a kódolandó eggyel eltólt táblát. 
 
-ascii_list = []
+ascii_list = ['\t']
 
 for i in range(32, 127):
      
-    ascii_list.append(chr(i)) 
-
-print(ascii_list)
-
+    ascii_list.append(chr(i))
 
 with open("table.txt", "w") as line: 
 
