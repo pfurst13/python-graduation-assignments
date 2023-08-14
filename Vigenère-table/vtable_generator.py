@@ -1,51 +1,19 @@
+# acii tábla tartalmazza a karakterek számozását. A chr() metodussal átkonvertálom a számot
+# a megfelelő karakterre. Utána a slice() metodussal hozom létre a kódolandó eggyel eltólt táblát. 
+
 ascii_list = []
 
-with open("ascii.txt", "r") as ascii_table:
-    for line in ascii_table:
-        line = line.strip('ascii code')
-        line = line.strip('\n')
-        line = line.strip('\t')
-        line = line.replace("\t", " ")
-        act_line = line.split(" ")
-        ascii_list.append(act_line[1])
-
-#print(ascii_list)
-first_line = "".join(ascii_list)
-print("0-1 line", first_line)
-idx = 0
-
-while idx <= len(ascii_list):
+for i in range(32, 127):
      
-     act_line = []
-     counter = 0
+    ascii_list.append(chr(i)) 
+
+print(ascii_list)
+
+
+with open("table.txt", "w") as line: 
+
+    for i in range(len(ascii_list)):
      
-     while counter <= len(ascii_list):
-        if idx <= counter:
-             act_line.append(ascii_list[counter - 1])
-        
-        counter += 1
-     
-     final = "".join(act_line)
-     if idx > 0:
-         final = final + first_line[:idx]
-     idx += 1
-     print(idx - 1, final)
-         
+        final_str = "".join(ascii_list[i:] + ascii_list[:i])
 
-# vtable_list = []
-    
-# with open("Vtabla.dat", "r") as vtable:
-#     for line in vtable:
-#         line = line.rstrip('\n')
-#         vtable_list.append(line)
-
-# formated_table = []
-
-# for i, line in enumerate(vtable_list):
-#     nums = '0123456789'
-#     act_line = list(line)
-#     new_line = act_line.insert((len(line))-1,nums)
-
-#     formated_table.append(new_line)
-
-# print(formated_table)
+        line.write(f"{final_str}\n")
