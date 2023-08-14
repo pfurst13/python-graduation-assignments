@@ -11,7 +11,6 @@ class Crypto:
             keyword += self.keyword
 
         keyword = keyword[:len(formated_user_text)]
-        print(keyword)
 
         return keyword
 
