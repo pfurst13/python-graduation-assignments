@@ -28,6 +28,6 @@ coding = cryptography.Crypto(user_key_word, vtable_list)
 result_text = coding.coded_text(user_input)
 
 print(result_text)
-print(repr(result_text))
+
 decoded_text = input("Give me the text what you'd like to decode: ")
 print(coding.decode_text(decoded_text))
