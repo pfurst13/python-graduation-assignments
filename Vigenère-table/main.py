@@ -28,8 +28,5 @@ result_text = coding.coded_text(user_input)
 
 print(result_text)
 
-decode_text = input("Give me the text what you'd like to decode: ")
-decode_keyword = input("Give me the keyword: ")
-
-print(decode.translate_code(decode_keyword, vtable_list, decode_text))
+print(decode.translate_code())
 
