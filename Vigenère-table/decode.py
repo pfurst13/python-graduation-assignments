@@ -1,7 +1,10 @@
 import cryptography
 import tables
 
-decode_text = input("Give me the text what you'd like to decode: ")
-decode_keyword = ("Give me the keyword")
+def translate_code(keyword, coding_table, decode_text):
+    
+    decode = cryptography.Crypto(keyword, coding_table)
 
-decode = cryptography.Crypto()
+    decoded_text = decode.decode_text(decode_text)
+
+    return decode_text
