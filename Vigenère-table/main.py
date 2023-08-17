@@ -28,4 +28,5 @@ result_text = coding.coded_text(user_input)
 print(result_text)
 
 decoded_text = input("Give me the text what you'd like to decode: ")
-print(coding.decode_text(decoded_text))
+decode_key_word = input("Enter your keyword: ")
+
