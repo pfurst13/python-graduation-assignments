@@ -1,7 +1,8 @@
 import cryptography
 import tables
 import string_format
-import decode
+import decode_text
+
 
 
 # 1 user input
@@ -28,5 +29,5 @@ result_text = coding.coded_text(user_input)
 
 print(result_text)
 
-print(decode.translate_code())
+print(decode_text.translate_code())
 
