@@ -1,5 +1,4 @@
 import cryptography
-import tables
 
 def translate_code(keyword, coding_table, decode_text):
     
@@ -7,4 +6,4 @@ def translate_code(keyword, coding_table, decode_text):
 
     decoded_text = decode.decode_text(decode_text)
 
-    return decode_text
+    return decoded_text
